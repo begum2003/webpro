@@ -2,17 +2,26 @@ body
 {
     background-image: url("images/bg.jpg");
 }
+h1
+{
+    font-size: 70px;
+   text-shadow: 2px 2px 15px rgb(241, 240, 240);
+}
 .grid-container{
     display: inline-grid;
-    margin-left:680px;
+    margin-left:530px;
     grid-template-columns: auto auto auto;
     padding: 10px;
     background-color: rgb(135, 0, 126);
-    place-items: center;
 }
-.grid-item{
+.cell{
     border: 1px solid black;
     padding: 20px;
     text-align: center;
+    justify-items: center;
     background-color: rgb(241, 203, 239);
+    height: 100px;
+    width: 100px;
+    align-content: space-between;
+    font-size: 70px;
 }
