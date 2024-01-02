@@ -1,3 +1,7 @@
+body
+{
+    background-image: url("images/bg.jpg");
+}
 .grid-container{
     display: inline-grid;
     margin-left:680px;
