@@ -15,13 +15,23 @@ h1
     background-color: rgb(135, 0, 126);
 }
 .cell{
-    border: 1px solid black;
-    padding: 20px;
-    text-align: center;
+    border: 1px solid rgb(135, 0, 126);
+    padding: 20px ;
+    align-items: center;
     justify-items: center;
     background-color: rgb(241, 203, 239);
     height: 100px;
     width: 100px;
     align-content: space-between;
     font-size: 70px;
+    text-align: center;
+}
+input{
+    color: transparent;
+    text-shadow: 0 0 0 black;
+}
+button{
+    width: 150px;
+    padding: 10px 10px;
+    margin-left: 690px;
 }

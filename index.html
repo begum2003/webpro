@@ -5,42 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1 style="display: block;text-align: center;color: rgb(177, 2, 107);"> TIC TAC TOE </h1>  
+    <div class="grid-container">
+            <input type="text" class="cell" id="t1">
+            <input type="text" class="cell" id="t2">
+            <input type="text" class="cell" id="t3">
+            <input type="text" class="cell" id="t4">
+            <input type="text" class="cell" id="t5">
+            <input type="text" class="cell" id="t6">
+            <input type="text" class="cell" id="t7">
+            <input type="text" class="cell" id="t8">
+            <input type="text" class="cell" id="t9">
+        </div>
+    </div><br><br>
+    <button type="submit">Restart</button>
+    <br><br>
     <script>
+        let cPlayer= 'X';
+        function randomchoice()
+        {
+            return Math.random < 0.5? 'X':'O';
+        }
+        function handleCell(event)
+        {
+            const cell = event.target;
+            if(cell.value.trim() === '')
+            {
+                cell.value = cPlayer;
+                cPlayer = cPlayer === 'X' ? 'O' : 'X';
+            }
+        }
+        document.getElementById("t1").addEventListener("click",handleCell);
+        document.getElementById("t2").addEventListener("click",handleCell);
+        document.getElementById("t3").addEventListener("click",handleCell);
+        document.getElementById("t4").addEventListener("click",handleCell);
+        document.getElementById("t5").addEventListener("click",handleCell);
+        document.getElementById("t6").addEventListener("click",handleCell);
+        document.getElementById("t7").addEventListener("click",handleCell);
+        document.getElementById("t8").addEventListener("click",handleCell);
+        document.getElementById("t9").addEventListener("click",handleCell);
         
     </script>
-</head>
-<body><br>
-    <h1 style="display: block;text-align: center;color: rgb(177, 2, 107);"> TIC TAC TOE </h1>
-    <br>
-    <div class="grid-container">
-        <div class="grid-item"class="t1">
-            <input type="text" class="cell">
-        </div>
-        <div class="grid-item"class="t2">
-            <input type="text" class="cell">
-        </div>
-        <div class="grid-item"class="t3">
-            <input type="text" class="cell">
-        </div>
-        <div class="grid-item"class="t4">
-            <input type="text" class="cell">
-        </div>
-        <div class="grid-item"class="t5">
-            <input type="text" class="cell">
-        </div>
-        <div class="grid-item"class="t6">
-            <input type="text" class="cell">
-        </div>
-        <div class="grid-item"class="t7">
-            <input type="text" class="cell">
-        </div>
-        <div class="grid-item"class="t8">
-            <input type="text" class="cell">
-        </div>
-        <div class="grid-item"class="t9">
-            <input type="text" class="cell">
-        </div>
-    </div>
-    
 </body>
 </html>
